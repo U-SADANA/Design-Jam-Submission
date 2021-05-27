@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://lh3.googleusercontent.com/proxy/SpF9F-1tzjIPKqdAcYujMGVGQq5-a2j8wHZu4PgC1Ma_l_QM71eTwUz3xsOVqJx7u_yzPcMMAlDo9E0qTwyBJLb-KcVv4Ak">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<title>CHILDREN</title>
+<style>
+
+@media only screen and (min-device-width:600px) {
+  body {
+  font-size:0.7rem;
+  letter-spacing:0.4rem;
+  line-height: 1.6;
+}
+ }
+ 
+@media (min-device-width:1000px) {
+   body
+ {
+   font-size:1.6rem;
+   letter-spacing:0.2rem;
+  line-height: 1.6;
+  } } 
+  
+html{
+  font-size: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:'Abel', sans-serif;
+    /* line-height: 1.6;
+  letter-spacing: 0.4rem; */
+  /* font-size:1.2rem; */
+}
+
+#myVideo {
+  z-index: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #cadab5;
+  width: 100%;
+  padding:1.25rem;
+  font-family:'Abel', sans-serif;
+    /* line-height: 1.6;
+  letter-spacing: 0.4rem; */
+  /* font-size:1.2rem; */
+}
+button {
+z-index:1;
+transition: all .5s ease;
+color: #cadab5;
+border: 0.0625rem solid #cadab5;
+position:fixed;
+text-transform: uppercase;
+text-align: center;
+font-family:  'Abel', sans-serif;
+font-family:  'Abel', sans-serif;
+font-size:1rem;
+line-height: 1.6;
+letter-spacing: 0.4rem;
+background-color : transparent;
+/* padding: 2px; */
+outline: none;
+border-radius: 0.375rem;
+}
+button:hover {
+color: #000000;
+background-color: #cadab5;
+}
+
+</style>
+</head>
+<body>
+  <a style="text-decoration:none;"href="/index.html"><button> &nbsp;HOME</button></a><br>
+  <!-- <a style="text-decoration:none;"href="/index.html"><button> &nbsp;HOME</button></a><br> -->
+    <!-- <audio controls autoplay loop="true"src="\resources\map.mp3" >
+		Update your browser. Your browser does not support HTML audio
+	  </audio> -->
+<video autoplay loop id="myVideo">
+  <source src="/resources/trees.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <!-- <h1>TREES</h1> -->
+  Saalumarada Thimmakka was married to Bekal Chikkayya.
+    The couple faced jibes and odd remarks for not able to have children, but her husband was extremely supportive of her.
+    One day she and her husband simply thought of planting trees and caring for them like their children.
+    Today , Thimmakka is a proud mother of 385 Banyan trees. 
+    Years after Chikkayya died , she adopted Sri Umesh who continues nurturing the plants.
+ 
+  <!-- <button id="myBtn" onclick="myFunction()">PAUSE</button> -->
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
+

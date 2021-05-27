@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+	<link rel="icon" href="https://lh3.googleusercontent.com/proxy/SpF9F-1tzjIPKqdAcYujMGVGQq5-a2j8wHZu4PgC1Ma_l_QM71eTwUz3xsOVqJx7u_yzPcMMAlDo9E0qTwyBJLb-KcVv4Ak">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <title>Foundation</title>
+
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 62.5rem;
+	        perspective:62.5rem;
+}
+
+.front,
+.back{
+  background-size: cover;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.25);
+  border-radius: 0.625rem;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 17.5rem;
+	height: auto;
+	border-radius: 0.625rem;
+	color: #cadab5;
+	font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+}
+
+.back{
+  background: #cadab5;
+  background: -webkit-linear-gradient(45deg,  #cadab5 0%,#485f2e 100%);
+  background: -o-linear-gradient(45deg,  #cadab5 0%,#485f2e 100%);
+  background: linear-gradient(45deg,  #cadab5 0%,#485f2e 100%);
+}
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #cadab5;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: #cadab5;
+  letter-spacing:0.4;
+  font-family: 'Abel', sans-serif;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+/* body {
+  display: flex;
+  justify-content: center; 
+ align-items: center;
+  min-height: 100vh;
+  background: #000; 
+}*/
+a {
+  text-decoration: none;
+  color: #cadab5;
+  font-size: 24px;
+}
+
+.heading {
+  
+  display: flex;
+  justify-content: center; 
+ align-items: center;
+  min-height: 100vh;
+  background: #000;
+/*   font-weight: 500; */
+ line-height:2;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Abel', sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #cadab5, #000);
+  letter-spacing: 0.6rem;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 10s linear infinite;
+  position: relative;
+  justify-content: center; 
+ align-items: center;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+.centered {
+  position: absolute;
+  bottom: 0.5rem;
+  align-content: center;
+  letter-spacing: 0.4rem;
+  right:45%;
+  left:45%;
+ 
+}
+body {
+  font-family:  'Abel', sans-serif;
+  z-index:0;
+  margin: 0;
+  background-color:black;
+  color:#cadab5;
+}
+button {
+z-index: 80;
+    transition: all .5s ease;
+    color: #cadab5;
+    border: 0.0625rem solid #cadab5;
+    position:fixed;
+    text-transform: uppercase;
+    text-align: center;
+    font-family:  'Abel', sans-serif;
+    font-family:  'Abel', sans-serif;
+font-size:1rem;
+line-height: 1.6;
+letter-spacing: 0.4rem;
+    background-color : transparent;
+    /* padding: 2px; */
+    outline: none;
+    border-radius: 0.375rem;
+}
+button:hover {
+    color: #000000;
+    background-color: #cadab5;
+}
+
+  </style>
+</head>
+<body>
+  <audio autoplay loop="true" src="\resources\foundation.mp3">
+    Update your browser. Your browser does not support HTML audio
+  </audio> 
+  <a style="text-decoration:none;"href="/index.html"><button> &nbsp;HOME</button></a><br>
+  <div class="heading">  
+    <p>Saalumarada Thimmakka International Foundation organization</p>
+  </div>
+
+    <div class="centered">
+      SWIPE &nbsp;&nbsp;UP
+    </div>
+  <div class="wrapper">
+    
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image: url(https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1551044400000/photosp/d1d05283-171d-4749-be35-aea32e709bd2/stock-photo-nature-plant-road-season-tunnel-tropical-leaves-trees-way-d1d05283-171d-4749-be35-aea32e709bd2.jpg)">
+              <div class="inner">
+                <p>Objective</p>
+                <span>Her vision</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p>The foundation was formed to work towards conserving the environment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image:url(https://www.theweekendleader.com/admin/upload/aug18-11-banyan.webp)">
+              <div class="inner">
+                <p>Supplemental</p>
+                <span>Services</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p>Foundation also donates for education, medicines , blood banks and builds rest houses for the poor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image: url(https://i.pinimg.com/originals/06/77/12/06771234cc5910b477d1ebef8032bf46.jpg)">
+              <div class="inner">
+                <p>Category</p>
+                <span>Work towards</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p>Public organization </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image: url(https://www.rd.com/wp-content/uploads/2019/08/Amazon-Jungle-Yasuni-Ecuador-scaled.jpg)">
+              <div class="inner">
+                <p>Work-Time</p>
+                <span>Office hours</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p>Daily: 24 hours a day</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image: url(https://bookofachievers.com/images/profile_pics/saalumarada+thimmakka1559212657296.jpg)">
+              <div class="inner">
+                <p>Address</p>
+                <span>Location</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p>16,10th cross,Manjunata Nagar Bagalgunte village,Tumkur MainRd,
+                  Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image: url(https://www.wilderness.org/sites/default/files/styles/1000x755/public/media/image/WA_Olympic_NP_MarcAdamus_R_130621_02-X3.jpg?h=f8d20cf0&itok=8ZpYcKr-)">
+              <div class="inner">
+                <p>Geographical</p>
+                <span>Coordinates</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p>Longitude — 77°29'35.96''E (77.493322)<br>Latitude — 13°3'11.71''N (13.053252).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image: url(https://1.bp.blogspot.com/-OsKORVz618s/XI8r7nJHLSI/AAAAAAAARE4/Uia-DYSq0BYTaKL0sRAEqoScN5y1ZgDNgCLcBGAs/s400/jiijuhjuhikiji.jpg)">
+              <div class="inner">
+                <p>Contact</p>
+                <span>Ring them</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p> +91 98458 47962</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+          <div class="container">
+            <div class="front" style="background-image: url(https://images.snapwi.re/f46d/5ad77ea7582c2ef9728b4567.w800.jpg)">
+              <div class="inner">
+                <p>Website</p>
+                <span>Visit their site</span>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <p>http://
+                  thimmakka
+                  foundation
+                  .org/</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+</body>
+</html>

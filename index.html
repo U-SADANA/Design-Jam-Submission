@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIOGRAPHY</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="icon" href="https://lh3.googleusercontent.com/proxy/SpF9F-1tzjIPKqdAcYujMGVGQq5-a2j8wHZu4PgC1Ma_l_QM71eTwUz3xsOVqJx7u_yzPcMMAlDo9E0qTwyBJLb-KcVv4Ak">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+@media only screen and (min-device-width:600px) {
+  body {
+  font-size:0.7rem;
+  letter-spacing:0.4rem;
+  line-height: 1.6;
+}
+ }
+ 
+@media (min-device-width:1000px) {
+   body
+ {
+   font-size:1.2rem;
+   letter-spacing:0.4rem;
+  line-height: 1.6;
+  } } 
+body {
+    background-color: rgb(0, 0, 0);
+    font-family:  'Abel', sans-serif;
+    /* font-size: 1.2rem;
+    line-height: 1.6; */
+    /* font-weight: 50; */
+}
+
+.container {
+display:block;
+    background-image: url("https://i.pinimg.com/originals/10/1f/2d/101f2d0987bfc4007505c3019cafd676.jpg");
+	height:100vh;
+	width:100vw;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+  position: relative;
+  
+ 
+}
+
+
+
+.container .content {
+  position: absolute;
+  font-family:  'Abel', sans-serif;
+  /* font-size:1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.4rem; */
+  /* font-weight: 50; */
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+  color: #cadab5;
+  width: 100%;
+  padding: 1.25rem;
+}
+
+
+
+/* newww */
+
+
+
+.btn {		
+	position: relative;	
+	padding: 1.4rem 4.2rem;
+	padding-right: 3.1rem;
+	/* font-size: 1.1rem; */
+	color: var(--inv);
+	letter-spacing: 1.1rem;
+	text-align:center;
+	text-transform: uppercase;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select:none;
+}
+
+.btn:before, .btn:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: var(--def);
+	transition-delay: .5s;
+}
+
+.btn:hover:before {
+	transition-delay: 0s;
+}
+
+.btn:hover:after {
+	background: var(--inv);
+	transition-delay: .35s;
+}
+
+/* From Top */
+
+.from-top:before, 
+.from-top:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from-top:before {
+	bottom: 0;	
+	border: 1px solid var(--inv);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from-top:after {
+	top: 0;
+	height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+	height: 100%;
+}
+
+/* From Left */
+
+.from-left:before, 
+.from-left:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.from-left:before {
+	right: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;	
+}
+
+.from-left:after {
+	left: 0;
+}
+
+.from-left:hover:before,
+.from-left:hover:after {
+	width: 100%;
+}
+
+/* From Right */
+
+.from-right:before, 
+.from-right:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.from-right:before {
+	left: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;	
+}
+
+.from-right:after {
+	right: 0;
+}
+
+.from-right:hover:before,
+.from-right:hover:after {
+	width: 100%;
+}
+
+/* From center */
+
+.from-center:before {
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;
+}
+
+.from-center:after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: var(--inv);
+}
+
+.from-center:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+.from-center:hover:after {
+	top: 0;
+	height: 100%;
+}
+
+/* From Bottom */
+
+.from-bottom:before, 
+.from-bottom:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from-bottom:before {
+	top: 0;	
+	border: 1px solid var(--inv);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from-bottom:after {
+	bottom: 0;
+	height: 0;
+}
+
+.from-bottom:hover:before,
+.from-bottom:hover:after {
+	height: 100%;
+}
+
+
+/* ~~~~~~~~~~~~ GLOBAL SETTINGS ~~~~~~~~~~~~ */
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	
+	--def: #000000; 	
+	--inv: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(-25deg, #000000 0%, #000000 100%);
+}
+
+
+div {margin-bottom: 3rem;}
+div:last-child {margin-bottom: 0;}
+
+
+
+</style>
+</head>
+<body>	  
+	<audio controls autoplay hidden loop="true"src="\resources\map.mp3" >
+		Update your browser. Your browser does not support HTML audio
+	  </audio>
+<div class="container">
+  <div class="content">
+    <h1>SAALUMARADA THIMMAKKA</h1>
+    <p>Environmentalist</p>
+  </div>
+</div>
+<br>
+<div>
+<a style="text-decoration:none;"href="/profile.html"><div class="btn from-left">PROFILE</div></a><br>
+<a style="text-decoration:none;"href="/childrens.html"><div class="btn from-right">DISCOVER HER CHILDREN</div></a><br>
+<a style="text-decoration:none;"href="/blacktheme.html"><div class="btn from-center">SHORT STORY</div></a><br>
+<a style="text-decoration:none;"href="/Achievements.html"><div class="btn from-top"> ACHIEVEMENTS</div></a><br>
+<a style="text-decoration:none;"href="/MAP.html"><div class="btn from-bottom">THE HIGHWAY SHE CURATED</div></a><br>
+<a style="text-decoration:none;"href="/foundation.html"><div class="btn from-right">INTERNATIONAL FOUNDATION</div></a><br>
+<a style="text-decoration:none;"href="/gallery.html"><div class="btn from-left">GALLERY</div></a><br>
+</div>
+</body>
+</html>
